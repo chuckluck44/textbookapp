@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From user:</strong>
+  <%= @textbook_match.from_user_id %>
+</p>
+
+<p>
+  <strong>To user:</strong>
+  <%= @textbook_match.to_user_id %>
+</p>
+
+<p>
+  <strong>Textbook:</strong>
+  <%= @textbook_match.textbook_id %>
+</p>
+
+<%= link_to 'Edit', edit_textbook_match_path(@textbook_match) %> |
+<%= link_to 'Back', textbook_matches_path %>

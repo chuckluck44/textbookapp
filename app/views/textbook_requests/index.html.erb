@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Textbook Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Textbook</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @textbook_requests.each do |textbook_request| %>
+      <tr>
+        <td><%= textbook_request.user_id %></td>
+        <td><%= textbook_request.textbook_id %></td>
+        <td><%= link_to 'Show', textbook_request %></td>
+        <td><%= link_to 'Edit', edit_textbook_request_path(textbook_request) %></td>
+        <td><%= link_to 'Destroy', textbook_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Textbook request', new_textbook_request_path %>

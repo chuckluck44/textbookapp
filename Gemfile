@@ -21,6 +21,8 @@ gem 'omniauth-facebook'
 gem 'pg'
 gem 'puma'
 gem 'simple_form'
+gem 'font-awesome-sass', '~> 4.6.2'
+gem 'bcrypt',               '3.1.7'
 group :development do
   gem 'better_errors'
   gem 'hub', :require=>nil

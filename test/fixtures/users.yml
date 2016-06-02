@@ -2,10 +2,6 @@
 
 one:
   name: MyString
-  provider: MyString
-  uid: MyString
 
 two:
   name: MyString
-  provider: MyString
-  uid: MyString

@@ -1,0 +1,13 @@
+<%= simple_form_for(@textbook_match) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :from_user_id %>
+    <%= f.input :to_user_id %>
+    <%= f.input :textbook_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
