@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_token
   has_many :textbook_offers
+  has_many :textbook_request
+  has_many :textbook_matches
 
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -31,12 +33,6 @@ i  # Returns the hash digest of the given string.
 
   # Returns true if the given token matches the digest.
   def authenticated?(remember_token)
-    return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  end
-
-  # Forgets a user.
-  def forget
-    update_attribute(:remember_digest, nil)
   end
 end
